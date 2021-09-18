@@ -31,7 +31,7 @@ public interface BillingRepository extends JpaRepository<Billing, Integer> {
 	@Query("Update Billing set billamount= ?2 where billingid= ?1 ")
     public void updateMyBill(int billingid , double amt);
 	
-	@Query("from Billing where  enddate=null")
+	@Query("from Billing where enddate=null")
 	public List<Billing> findAllBills();
 
 }
