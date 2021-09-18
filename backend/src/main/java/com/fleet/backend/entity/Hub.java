@@ -22,6 +22,15 @@ public class Hub {
 	private String address;
 	private int cityidh;
 	private int stateidh;
+	private int airportid;
+
+	public int getAirportid() {
+		return airportid;
+	}
+
+	public void setAirportid(int airportid) {
+		this.airportid = airportid;
+	}
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@Transient
@@ -36,7 +45,7 @@ public class Hub {
 	}
 
 	public Hub(int hubid, String hubname, double contactno, String address, int cityidh, int stateidh, State state,
-			City city) {
+			City city, int airportid ) {
 		super();
 		this.hubid = hubid;
 		this.hubname = hubname;
@@ -46,6 +55,7 @@ public class Hub {
 		this.stateidh = stateidh;
 		this.state = state;
 		this.city = city;
+		this.airportid = airportid;
 	}
 
 	public int getHubid() {
