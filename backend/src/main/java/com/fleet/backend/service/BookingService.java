@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.fleet.backend.entity.Booking;
 import com.fleet.backend.entity.Car;
+import com.fleet.backend.entity.Hub;
 import com.fleet.backend.repository.BookingRepository;
 
 
@@ -57,6 +58,10 @@ public class BookingService {
 
 	public Car findById(int carid) {
 		return this.bookRepository.findById(carid);
+	}
+	
+	public Hub findByAirportId(int airportid) {
+		return this.bookRepository.findByAirportId(airportid);
 	}
 	
      public List<Booking> findAllBookings()

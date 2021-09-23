@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.fleet.backend.entity.Booking;
 import com.fleet.backend.entity.Car;
+import com.fleet.backend.entity.Hub;
 
 
 public interface BookingRepository extends JpaRepository<Booking, Integer> {
@@ -34,6 +35,8 @@ public interface BookingRepository extends JpaRepository<Booking, Integer> {
 	@Query("From Booking where userbid=?1")
 	List<Booking> viewMyBooking(int userid);
 	
+	@Query("From Hub where airportid=?1")
+	public Hub findByAirportId(int airportid);
 	
 	
 }
