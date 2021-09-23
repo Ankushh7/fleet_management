@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fleet.backend.entity.LogUser;
@@ -21,11 +22,12 @@ import com.fleet.backend.service.UserService;
 
 @org.springframework.web.bind.annotation.RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
+//@RequestMapping("/api/v1/")
 public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/save-user")
 	@Transactional
 	@ResponseBody
@@ -35,7 +37,7 @@ public class UserController {
 		return new ResponseEntity<>(userService.saveMyUser(user), HttpStatus.OK);
 	}
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://localhost:3000")
 	@PostMapping("/login")
 	@Transactional
 	public ResponseEntity<User> login(@RequestBody LogUser loguser) {
@@ -58,7 +60,7 @@ public class UserController {
 			return null;
 	}
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	@CrossOrigin(origins = "http://localhost:3000")
 	@GetMapping("/allusers")
 	public ResponseEntity<List<User>> showAllUsers() {
 		List<User> users = userService.showAllUsers();
