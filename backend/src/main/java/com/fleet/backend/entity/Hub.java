@@ -18,43 +18,43 @@ public class Hub {
 
 	private String hubname;
 
-	private double contactno;
+	private String contactno;
 	private String address;
-	private int cityidh;
+	private String cityHub;
 	private int stateidh;
-	private int airportid;
+	private String airportid;
 
-	public int getAirportid() {
+	public String getAirportid() {
 		return airportid;
 	}
 
-	public void setAirportid(int airportid) {
+	public void setAirportid(String airportid) {
 		this.airportid = airportid;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@Transient
-	@JoinColumn(name = "stateidh", referencedColumnName = "stateid", insertable = false, updatable = false)
-	private State state;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@Transient
-	@JoinColumn(name = "cityidh", referencedColumnName = "cityid", insertable = false, updatable = false)
-	private City city;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@Transient
+//	@JoinColumn(name = "stateidh", referencedColumnName = "stateid", insertable = false, updatable = false)
+//	private State state;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@Transient
+//	@JoinColumn(name = "cityidh", referencedColumnName = "cityid", insertable = false, updatable = false)
+//	private City city;
 
 	public Hub() {
 	}
 
-	public Hub(int hubid, String hubname, double contactno, String address, int cityidh, int stateidh, State state,
-			City city, int airportid ) {
+	public Hub(int hubid, String hubname, String contactno, String address, String cityHub, int stateidh,/* State state,
+			City city,*/ String airportid ) {
 		super();
 		this.hubid = hubid;
 		this.hubname = hubname;
 		this.contactno = contactno;
 		this.address = address;
-		this.cityidh = cityidh;
+		this.cityHub = cityHub;
 		this.stateidh = stateidh;
-		this.state = state;
-		this.city = city;
+//		this.state = state;
+//		this.city = city;
 		this.airportid = airportid;
 	}
 
@@ -74,11 +74,11 @@ public class Hub {
 		this.hubname = hubname;
 	}
 
-	public double getContactno() {
+	public String getContactno() {
 		return contactno;
 	}
 
-	public void setContactno(double contactno) {
+	public void setContactno(String contactno) {
 		this.contactno = contactno;
 	}
 
@@ -90,12 +90,12 @@ public class Hub {
 		this.address = address;
 	}
 
-	public int getCityidh() {
-		return cityidh;
+	public String getCityHub() {
+		return cityHub;
 	}
 
-	public void setCityidh(int cityidh) {
-		this.cityidh = cityidh;
+	public void setCityHub(String cityHub) {
+		this.cityHub = cityHub;
 	}
 
 	public int getStateidh() {
@@ -106,20 +106,20 @@ public class Hub {
 		this.stateidh = stateidh;
 	}
 
-	public State getState() {
-		return state;
-	}
-
-	public void setState(State state) {
-		this.state = state;
-	}
-
-	public City getCity() {
-		return city;
-	}
-
-	public void setCity(City city) {
-		this.city = city;
-	}
+//	public State getState() {
+//		return state;
+//	}
+//
+//	public void setState(State state) {
+//		this.state = state;
+//	}
+//
+//	public City getCity() {
+//		return city;
+//	}
+//
+//	public void setCity(City city) {
+//		this.city = city;
+//	}
 
 }
