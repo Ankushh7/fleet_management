@@ -1,5 +1,6 @@
 package com.fleet.backend.entity;
 
+import java.math.BigInteger;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
@@ -24,7 +25,7 @@ public class Billing {
 
 	private LocalDate enddate;
 	private String usermail;
-	private Double customermobno;
+	private String customermobno;
     private String carname;
 	private int hubidbill;
 	private int categoryidbill;
@@ -55,7 +56,7 @@ public class Billing {
 	}
 
 	public Billing(int billingid, String customerbname, double billamount, LocalDate startdate, LocalDate enddate,
-			String usermail, Double customermobno, String carname, int hubidbill, int categoryidbill, int caridbill,
+			String usermail, String customermobno, String carname, int hubidbill, int categoryidbill, int caridbill,
 			int bookingidbill, Hub hub, CarCategories carcat, Car car, Booking booking) {
 		super();
 		this.billingid = billingid;
@@ -124,11 +125,11 @@ public class Billing {
 		this.usermail = usermail;
 	}
 
-	public Double getCustomermobno() {
+	public String getCustomermobno() {
 		return customermobno;
 	}
 
-	public void setCustomermobno(Double customermobno) {
+	public void setCustomermobno(String customermobno) {
 		this.customermobno = customermobno;
 	}
 
