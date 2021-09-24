@@ -21,7 +21,7 @@ public class Booking {
 	private LocalDate BookingDateAndTime;
 	private String customerfname;
 	private String customerlname;
-	private double customermobno;
+	private String customermobno;
 	private String usermailid;
 	private Double customerdlno;
 	private int carcategorybid;
@@ -56,7 +56,7 @@ public class Booking {
 
 	
 	public Booking(int bookingid, LocalDate bookingDateAndTime, String customerfname, String customerlname,
-			double customermobno, String usermailid, Double customerdlno, int carcategorybid, int carbid, int userbid,
+			String customermobno, String usermailid, Double customerdlno, int carcategorybid, int carbid, int userbid,
 			int hubbid, String carname, CarCategories caracat, Car car, User user, Hub hub) {
 		super();
 		this.bookingid = bookingid;
@@ -120,11 +120,11 @@ public class Booking {
 		this.customerlname = customerlname;
 	}
 
-	public double getCustomermobno() {
+	public String getCustomermobno() {
 		return customermobno;
 	}
 
-	public void setCustomermobno(double customermobno) {
+	public void setCustomermobno(String customermobno) {
 		this.customermobno = customermobno;
 	}
 
