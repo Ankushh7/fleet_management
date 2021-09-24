@@ -20,9 +20,7 @@ public class Billing {
 	private int billingid;
 	private String customerbname;
 	private double billamount;
-
 	private LocalDate startdate;
-
 	private LocalDate enddate;
 	private String usermail;
 	private String customermobno;
