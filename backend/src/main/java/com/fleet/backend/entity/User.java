@@ -33,7 +33,6 @@ public class User {
 	private String useraddress;
 	@Column(name = "user_dlno")
 	private String userdlno;
-	private int isadmin;
 	private String state;
 
 	private String city;
@@ -46,19 +45,11 @@ public class User {
 //	@JoinColumn(name = "cityidu", referencedColumnName = "cityid", insertable = false, updatable = false)
 //	private City city;
 
-	public int getIsadmin() {
-		return isadmin;
-	}
-
-	public void setIsadmin(int isadmin) {
-		this.isadmin = isadmin;
-	}
-
 	public User() {
 	}
 
 	public User(int userid, String userfname, String userlname, String usermbno, String usermail, String password,
-			String useraddress, String userdlno, int isadmin, String state, String city) {
+			String useraddress, String userdlno, String state, String city) {
 		super();
 		this.userid = userid;
 		this.userfname = userfname;
@@ -68,7 +59,7 @@ public class User {
 		this.password = password;
 		this.useraddress = useraddress;
 		this.userdlno = userdlno;
-		this.isadmin = isadmin;
+
 		this.state = state;
 		this.city = city;
 //		this.state = state;
