@@ -12,7 +12,7 @@ public class CarCategories {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int categoryid;
 	private String categoryname;
-	private String imagepath;
+//	private String imagepath;
 	private double dailyrates;
 	private double weeklyrates;
 	private double monthlyrates;
@@ -20,12 +20,12 @@ public class CarCategories {
 	public CarCategories() {
 	}
 
-	public CarCategories(int categoryid, String categoryname, String imagepath, double dailyrates, double weeklyrates,
+	public CarCategories(int categoryid, String categoryname, /*String imagepath,*/ double dailyrates, double weeklyrates,
 			double monthlyrates) {
 		super();
 		this.categoryid = categoryid;
 		this.categoryname = categoryname;
-		this.imagepath = imagepath;
+//		this.imagepath = imagepath;
 		this.dailyrates = dailyrates;
 		this.weeklyrates = weeklyrates;
 		this.monthlyrates = monthlyrates;
@@ -47,13 +47,13 @@ public class CarCategories {
 		this.categoryname = categoryname;
 	}
 
-	public String getImagepath() {
-		return imagepath;
-	}
-
-	public void setImagepath(String imagepath) {
-		this.imagepath = imagepath;
-	}
+//	public String getImagepath() {
+//		return imagepath;
+//	}
+//
+//	public void setImagepath(String imagepath) {
+//		this.imagepath = imagepath;
+//	}
 
 	public double getDailyrates() {
 		return dailyrates;
