@@ -18,8 +18,8 @@ public class Car {
 	private String carname;
 	//private String carnoplate;
 	private int capacity;
-	private String fueltype;
-	private Double mileage;
+//	private String fueltype;
+//	private Double mileage;
 	private String color;
 	private int availability;
 	private int hubidc;
@@ -35,14 +35,14 @@ public class Car {
 	@JoinColumn(name = "categoryidc", referencedColumnName = "categoryid", insertable = false, updatable = false)
 	private CarCategories carcat;
      public Car(){}
-	public Car(int carid, String carname, int capacity, String fueltype, Double mileage, String color, int availability,
+	public Car(int carid, String carname, int capacity, /*String fueltype, Double mileage,*/ String color, int availability,
 			int hubidc, int categoryidc, int countinhub, Hub hub, CarCategories carcat) {
 		super();
 		this.carid = carid;
 		this.carname = carname;
 		this.capacity = capacity;
-		this.fueltype = fueltype;
-		this.mileage = mileage;
+//		this.fueltype = fueltype;
+//		this.mileage = mileage;
 		this.color = color;
 		this.availability = availability;
 		this.hubidc = hubidc;
@@ -69,18 +69,18 @@ public class Car {
 	public void setCapacity(int capacity) {
 		this.capacity = capacity;
 	}
-	public String getFueltype() {
-		return fueltype;
-	}
-	public void setFueltype(String fueltype) {
-		this.fueltype = fueltype;
-	}
-	public Double getMileage() {
-		return mileage;
-	}
-	public void setMileage(Double mileage) {
-		this.mileage = mileage;
-	}
+//	public String getFueltype() {
+//		return fueltype;
+//	}
+//	public void setFueltype(String fueltype) {
+//		this.fueltype = fueltype;
+//	}
+//	public Double getMileage() {
+//		return mileage;
+//	}
+//	public void setMileage(Double mileage) {
+//		this.mileage = mileage;
+//	}
 	public String getColor() {
 		return color;
 	}
