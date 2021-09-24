@@ -21,7 +21,7 @@ public class Hub {
 	private String contactno;
 	private String address;
 	private String cityHub;
-	private int stateidh;
+	private String state;
 	private String airportid;
 
 	public String getAirportid() {
@@ -44,7 +44,7 @@ public class Hub {
 	public Hub() {
 	}
 
-	public Hub(int hubid, String hubname, String contactno, String address, String cityHub, int stateidh,/* State state,
+	public Hub(int hubid, String hubname, String contactno, String address, String cityHub, String state,/* State state,
 			City city,*/ String airportid ) {
 		super();
 		this.hubid = hubid;
@@ -52,7 +52,7 @@ public class Hub {
 		this.contactno = contactno;
 		this.address = address;
 		this.cityHub = cityHub;
-		this.stateidh = stateidh;
+		this.state = state;
 //		this.state = state;
 //		this.city = city;
 		this.airportid = airportid;
@@ -98,12 +98,12 @@ public class Hub {
 		this.cityHub = cityHub;
 	}
 
-	public int getStateidh() {
-		return stateidh;
+	public String getStateidh() {
+		return state;
 	}
 
-	public void setStateidh(int stateidh) {
-		this.stateidh = stateidh;
+	public void setState(String state) {
+		this.state = state;
 	}
 
 //	public State getState() {
