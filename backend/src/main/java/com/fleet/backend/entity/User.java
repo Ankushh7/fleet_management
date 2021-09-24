@@ -23,14 +23,6 @@ public class User {
 	@Column(name = "user_lname")
 	private String userlname;
 
-	@Override
-	public String toString() {
-		return "User [userid=" + userid + ", userfname=" + userfname + ", userlname=" + userlname + ", usermbno="
-				+ usermbno + ", usermail=" + usermail + ", password=" + password + ", useraddress=" + useraddress
-				+ ", userdlno=" + userdlno + ", isadmin=" + isadmin + ", stateidu=" + stateidu + ", cityidu=" + cityidu
-				+ ", state=" + state + ", city=" + city + "]";
-	}
-
 	@Column(name = "user_mobno")
 	private String usermbno;
 	@Column(name = "user_mail")
@@ -42,17 +34,17 @@ public class User {
 	@Column(name = "user_dlno")
 	private String userdlno;
 	private int isadmin;
-	private int stateidu;
+	private String state;
 
-	private int cityidu;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@Transient
-	@JoinColumn(name = "stateidu", referencedColumnName = "stateid", insertable = false, updatable = false)
-	private State state;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@Transient
-	@JoinColumn(name = "cityidu", referencedColumnName = "cityid", insertable = false, updatable = false)
-	private City city;
+	private String city;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@Transient
+//	@JoinColumn(name = "stateidu", referencedColumnName = "stateid", insertable = false, updatable = false)
+//	private State state;
+//	@ManyToOne(fetch = FetchType.LAZY)
+//	@Transient
+//	@JoinColumn(name = "cityidu", referencedColumnName = "cityid", insertable = false, updatable = false)
+//	private City city;
 
 	public int getIsadmin() {
 		return isadmin;
@@ -66,7 +58,7 @@ public class User {
 	}
 
 	public User(int userid, String userfname, String userlname, String usermbno, String usermail, String password,
-			String useraddress, String userdlno, int isadmin, int stateidu, int cityidu, State state, City city) {
+			String useraddress, String userdlno, int isadmin, String state, String city) {
 		super();
 		this.userid = userid;
 		this.userfname = userfname;
@@ -77,10 +69,10 @@ public class User {
 		this.useraddress = useraddress;
 		this.userdlno = userdlno;
 		this.isadmin = isadmin;
-		this.stateidu = stateidu;
-		this.cityidu = cityidu;
 		this.state = state;
 		this.city = city;
+//		this.state = state;
+//		this.city = city;
 	}
 
 	public int getUserid() {
@@ -147,36 +139,36 @@ public class User {
 		this.userdlno = userdlno;
 	}
 
-	public int getStateidu() {
-		return stateidu;
-	}
-
-	public void setStateidu(int stateidu) {
-		this.stateidu = stateidu;
-	}
-
-	public int getCityidu() {
-		return cityidu;
-	}
-
-	public void setCityidu(int cityidu) {
-		this.cityidu = cityidu;
-	}
-
-	public State getState() {
+	public String getState() {
 		return state;
 	}
 
-	public void setState(State state) {
+	public void setState(String state) {
 		this.state = state;
 	}
 
-	public City getCity() {
+	public String getCity() {
 		return city;
 	}
 
-	public void setCity(City city) {
+	public void setCity(String city) {
 		this.city = city;
 	}
+
+//	public State getState() {
+//		return state;
+//	}
+//
+//	public void setState(State state) {
+//		this.state = state;
+//	}
+//
+//	public City getCity() {
+//		return city;
+//	}
+//
+//	public void setCity(City city) {
+//		this.city = city;
+//	}
 
 }
